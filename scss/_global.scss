@@ -1,0 +1,88 @@
+/*************************************** 
+            Gloabl Styles
+  **************************************/
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.5rem;
+}
+
+main {
+  // position relative is required for this tag to apply overflow in mobile browsers
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+.bg-primary {
+  background-color: #563d7c !important;
+}
+
+.txt-white {
+  color: #fff !important;
+}
+
+.txt-black {
+  color: #2c2929 !important;
+}
+
+/************************************** 
+            Buttons
+**************************************/
+.btn {
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #ada2bd;
+}
+
+.btn-primary {
+  background-color: #563d7c;
+}
+
+.btn-important {
+  background-color: #f57b00;
+  white-space: nowrap;
+  display: block;
+  padding: 0.1rem 1rem !important;
+  &:hover {
+    background-color: #d17a23;
+    color: #f3f3f3;
+  }
+}
+
+.btn-block {
+  display: block;
+}
+
+.btn-globe {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border: 3px solid $primary-color;
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease-out;
+  background-color: #fff;
+  margin-top: 0.5rem;
+  color: $primary-clr-dark;
+  &:hover {
+    background-color: $primary-color;
+    color: #f3f3f3;
+  }
+}
