@@ -9,6 +9,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", Helvetica, sans-serif;
+  height: 100%;
 }
 
 /************************************** 
@@ -42,7 +43,7 @@ body {
     align-items: center;
     justify-content: center;
     img {
-      width: 42px;
+      width: 40px;
     }
     a {
       color: $white;
@@ -52,16 +53,16 @@ body {
     .navbar_list {
       display: block;
       position: absolute;
-      top: 60px;
+      top: $nav-height;
       left: 0;
       width: 0vw;
-      min-height: calc(100vh - 60px);
+      min-height: calc(100vh - 50px);
       background-color: $white;
       transition: all 0.1s ease-out;
       text-align: center;
       list-style-type: none;
       // incase of overflow
-      max-height: calc(100vh - 60px);
+      max-height: calc(100vh - 50px);
       overflow-y: auto;
       li:hover a {
         // magic
@@ -75,7 +76,7 @@ body {
       }
       a {
         color: #111111;
-        line-height: 50px;
+        line-height: $nav-height;
         padding: 1.25rem 0;
         white-space: nowrap;
       }
@@ -133,15 +134,15 @@ body {
     box-shadow: none;
     transition: all 0.5s ease-in-out;
     span {
-      width: 25px;
+      width: 22px;
     }
     span:before {
       transform: rotate(-45deg) translate(-7px, 0px);
-      width: 19px;
+      width: 16px;
     }
     span:after {
       transform: rotate(45deg) translate(-7px, 0px);
-      width: 19px;
+      width: 16px;
     }
   }
 }
@@ -182,8 +183,9 @@ body {
   .btn-codepen {
     padding: 1rem 2rem;
     border: 3px solid $primary-color;
+    color: $primary-clr-dark;
     border-radius: 3rem;
-    font-size: 8vw;
+    font-size: 6vw;
     font-weight: 500;
     transition: all 0.3s ease-out;
     &:hover {
@@ -192,6 +194,8 @@ body {
     }
   }
 }
+
+@import "footer";
 /*********************************************** 
                 Responsive Nav
 ***********************************************/
@@ -212,6 +216,7 @@ body {
   }
   .navbar_container {
     padding: 0 0.5rem;
+    font-size: 1rem;
   }
   .navbar {
     display: grid;
@@ -220,10 +225,10 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-left: 1rem;
-      width: 100%;
       img {
-        width: 45px;
+        position: relative;
+        top: 2px;
+        width: 35px;
       }
     }
     nav {
@@ -256,7 +261,7 @@ body {
           color: #ffffff;
         }
         li.active {
-          background-color: #654a8d;
+          background-color: $primary-clr-active;
           a {
             color: #ffffff;
           }
@@ -271,12 +276,14 @@ body {
     white-space: nowrap;
     .dropdown_list {
       position: absolute; // magical importance
+      margin-top: -10px;
       display: none;
       background-color: #ffffff;
       border: 1px solid #d9d9d9;
       border-radius: 3px;
       left: -0.3rem;
       width: auto;
+      min-width: 180px;
       li {
         &:hover {
           background-color: #f8f9fa;

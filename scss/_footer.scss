@@ -1,0 +1,119 @@
+footer {
+  background-color: $primary-clr-dark;
+  height: 65vh;
+  text-align: center;
+  color: #f3f3f3;
+  #contact {
+    position: relative;
+    top: -15vh;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: #f3f3f3;
+    background-color: $secondary-color;
+    border-radius: 1rem;
+    height: 30vh;
+    .btn-globe {
+      background-color: inherit;
+      color: #f3f3f3;
+      width: 80%;
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+  }
+  .footer-bottom {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: -14vh;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    .logo {
+      .footer-logo {
+        width: 100px;
+      }
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      width: 90%;
+      margin: 1rem auto;
+      .social-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        font-size: 1.8rem;
+        cursor: pointer;
+        margin-left: 0.5rem;
+        transition: all 0.3s ease-in-out;
+        a {
+          color: #222222;
+        }
+      }
+      div[class*="social-icon-"] {
+        i {
+          color: #222222;
+          position: relative;
+          top: 1px;
+        }
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    h5 {
+      font-family: Arial;
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    #contact {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      * {
+        margin-left: 1rem;
+      }
+
+      h1 {
+        font-family: Rajdhani, Arial, Helvetica, sans-serif;
+        font-size: 3rem;
+      }
+
+      p {
+        width: 35%;
+        font-size: 1.3rem;
+      }
+
+      .btn-globe {
+        width: 20%;
+        min-width: 2rem;
+        &:hover {
+          background-color: $primary-color;
+        }
+      }
+    }
+
+    .footer-bottom {
+      .social-icons {
+        .social-icon {
+          width: 60px;
+          height: 60px;
+          font-size: 2rem;
+          margin-left: 1.5rem;
+        }
+      }
+    }
+  }
+}

@@ -15,7 +15,6 @@ dropdown_btns.forEach(link => {
     e.currentTarget.childNodes[1].classList.toggle("fa-caret-up");
     const ownDropdown = e.currentTarget.nextElementSibling;
     ownDropdown.classList.toggle("show_dropdown");
-
     document.querySelectorAll(".dropdown_btn + .dropdown_list").forEach(el => {
       if (el !== ownDropdown) {
         el.classList.remove("show_dropdown");
